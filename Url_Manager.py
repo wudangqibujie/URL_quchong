@@ -23,10 +23,15 @@ def old_urls_md5(old_url):
 if __name__ == '__main__':
     urls = urls_create.Get_urls()
     while True:
+        try:
+            new_url = get_new_url(urls)
+            print(new_url)
+        except:
+            print("没有URLS了")
+            break
 
 
-    new_url = get_new_url(urls)
-    print(new_url)
+
 
 
     #
